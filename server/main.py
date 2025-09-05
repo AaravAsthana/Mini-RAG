@@ -4,11 +4,11 @@ from typing import Optional
 from fastapi import FastAPI, UploadFile, Form, File, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from server.chunking import chunk_text
-from server.embeddings import embed_text
-from server.llm import generate_answer
-from server.db import upsert_document, query_documents
-from server.reranker import rerank_query
+from chunking import chunk_text
+from embeddings import embed_text
+from llm import generate_answer
+from db import upsert_document, query_documents
+from reranker import rerank_query
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("mini_rag")
