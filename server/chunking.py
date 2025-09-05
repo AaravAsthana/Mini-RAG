@@ -1,6 +1,6 @@
 # chunking.py
 import tiktoken
-from config import CHUNK_SIZE, CHUNK_OVERLAP
+from server.config import CHUNK_SIZE, CHUNK_OVERLAP
 
 def count_tokens(text: str) -> int:
     enc = tiktoken.get_encoding("cl100k_base")

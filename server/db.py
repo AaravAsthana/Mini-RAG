@@ -1,7 +1,7 @@
 # db.py
 import logging
 from supabase import create_client
-from config import SUPABASE_URL, SUPABASE_KEY, TOP_K
+from server.config import SUPABASE_URL, SUPABASE_KEY, TOP_K
 
 logger = logging.getLogger("mini_rag.db")
 logger.setLevel(logging.INFO)
