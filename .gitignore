@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Env
+.env
+*.env
+
+# Poetry
+poetry.lock
+
+# Node
+node_modules/
+dist/
+build/

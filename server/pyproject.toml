@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "mini-rag-server"
+version = "0.1.0"
+description = ""
+authors = ["AaravAsthana <aaravasthana2308@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+fastapi = "^0.116.1"
+uvicorn = {extras = ["standard"], version = "^0.35.0"}
+httpx = "^0.28.1"
+python-dotenv = "^1.1.1"
+pydantic = "^2.11.7"
+tiktoken = "^0.11.0"
+supabase = "^2.18.1"
+google-genai = "^1.33.0"
+python-multipart = "^0.0.20"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.3"
+black = "^24.8.0"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

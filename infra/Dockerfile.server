@@ -1,0 +1,25 @@
+# Dockerfile.server
+
+FROM python:3.11-slim AS builder
+
+# Install Poetry
+RUN pip install --no-cache-dir poetry
+
+# Set working dir
+WORKDIR /app
+
+# Copy Poetry files
+COPY server/pyproject.toml server/poetry.lock* ./
+
+# Install dependencies
+RUN poetry config virtualenvs.create false \
+  && poetry install --no-dev --no-interaction --no-ansi
+
+# Copy app source
+COPY server/server ./server
+
+# Expose FastAPI port
+EXPOSE 8000
+
+# Run uvicorn
+CMD ["uvicorn", "server.main:app", "--host", "0.0.0.0", "--port", "8000"]
